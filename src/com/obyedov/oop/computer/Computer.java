@@ -1,13 +1,25 @@
 package com.obyedov.oop.computer;
 
 public class Computer {
-    String name;
-
-    void on(){
-        System.out.println(name + " = acceso");
+    public String getName() {
+        return name;
     }
 
-    void off(){
-        System.out.println(name + " = spento");
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private String name;
+
+    public void on(){
+        System.out.println(name + unionText() + "acceso");
+    }
+
+    public void off(){
+        System.out.println(name + unionText() + "spento");
+    }
+
+    public String unionText(){
+        return " è ";
     }
 }
